@@ -1,0 +1,4 @@
+﻿  pratical.c
+C:\Users\JIMMY\OneDrive\Desktop\pcd 2\Pratical\Pratical\pratical.c(112,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\JIMMY\OneDrive\Desktop\pcd 2\Pratical\Pratical\pratical.c(115,17): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  Pratical.vcxproj -> C:\Users\JIMMY\OneDrive\Desktop\pcd 2\Pratical\Debug\Pratical.exe
