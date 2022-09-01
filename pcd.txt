@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include<math.h>
+#pragma warning (disable:4996)
+
+
+int main() {
+
+    char name[20];
+    char gender, yesorno;
+    int month, day, year;
+    double salary;
+
+    do {
+        rewind(stdin);
+        printf("Please enter your name >");
+        scanf("%[^\n]", &name);
+        
+
+        do {
+            printf("\nPlease enter your birthday in month:");
+            rewind(stdin);
+            scanf("%d", &month);
+            if (month <= 0 || month > 12)
+                printf("Please enter a correct value");
+        } while (month <= 0 || month > 12);
+        do {
+            printf("\nPlease enter your birthday in day:");
+            scanf("%d", &day);
+            if (day <= 0 || day > 31)
+                printf("Please enter a correct value");
+        } while (day <= 0 || day > 31);
+
+        do {
+            printf("\nPlease enter your birthday in year:");
+            scanf("%d", &year);
+            if (year <= 0)
+                printf("Please enter a correct value");
+        } while (year <= 0);
+        do {
+            printf("\nPlease enter your sex(M/F):");
+            rewind(stdin);
+            scanf("%c", &gender);
+            if (gender != 'm' && gender != 'M' && gender != 'f' && gender != 'F')
+                printf("please enter a correct character");
+
+        } while (gender != 'm' && gender != 'M' && gender != 'f' && gender != 'F');
+        do {
+            printf("\nPlease enter your salary:");
+            scanf("%lf", &salary);
+            if (salary < 0)
+                printf("Please enter a correct value");
+        } while (salary < 0);
+        printf("\n=============================\n");
+        printf("\n Name: %s", name);
+        printf("\nBirthday : %d-%d-%d", day, month, year);
+        printf("\nGender : %c", gender);
+        printf("\nSalary : %.2f", salary);
+        printf("\n=============================\n");
+        printf("NEXT?(Y or N)");
+        rewind(stdin);
+        scanf("%c", &yesorno);
+    } while (yesorno == 'y' || yesorno == 'Y');
+
+    system("pause");
+
+
+    return 0;
+}
